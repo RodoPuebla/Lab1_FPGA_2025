@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Salida_ACK",
+					"strict" : false
+				},
+				{
+					"name" : "Datos[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Datos[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Datos[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Datos[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Datos[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Datos[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Datos[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Datos[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SDA",
+					"strict" : false
+				},
+				{
+					"name" : "SCL",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

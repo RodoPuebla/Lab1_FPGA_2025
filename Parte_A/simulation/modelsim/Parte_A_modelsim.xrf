@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, /home/rodrigo/Escritorio/Parte_A/Parte_A.vhd
+source_file = 1, /home/rodrigo/intelFPGA_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, /home/rodrigo/intelFPGA_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, /home/rodrigo/intelFPGA_lite/18.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, /home/rodrigo/intelFPGA_lite/18.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, /home/rodrigo/Escritorio/Parte_A/db/Parte_A.cbx.xml
+design_name = hard_block
+design_name = Parte_A
+instance = comp, \S~output\, S~output, Parte_A, 1
+instance = comp, \C_out~output\, C_out~output, Parte_A, 1
+instance = comp, \C_in~input\, C_in~input, Parte_A, 1
+instance = comp, \B~input\, B~input, Parte_A, 1
+instance = comp, \A~input\, A~input, Parte_A, 1
+instance = comp, \S~0\, S~0, Parte_A, 1
+instance = comp, \C_out~0\, C_out~0, Parte_A, 1

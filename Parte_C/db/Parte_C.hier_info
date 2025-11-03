@@ -1,0 +1,104 @@
+|Parte_C
+S0 <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst26.CLK
+CLK => inst22.CLK
+CLK => inst23.CLK
+CLK => inst27.CLK
+CLK => inst25.CLK
+CLK => inst24.CLK
+CLK => inst29.CLK
+CLK => inst28.CLK
+A0 => inst22.DATAIN
+B0 => inst23.DATAIN
+S1 <= inst27.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst25.DATAIN
+B1 => inst24.DATAIN
+S2 <= inst29.DB_MAX_OUTPUT_PORT_TYPE
+C1 <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+Bandera_Z <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Parte_C|Full_Adder:inst5
+A => x.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => x.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Parte_C|Full_Adder:inst6
+A => x.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => x.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Parte_C|Full_Adder:inst9
+A => x.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => x.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Parte_C|Full_Adder:inst10
+A => x.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => x.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Parte_C|Full_Adder:inst15
+A => x.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => x.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Parte_C|Full_Adder:inst14
+A => x.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => x.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,39 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity FFJK is
+	
+	port( J:   in std_logic;
+			K:   in std_logic;
+			clk: in std_logic;
+			
+			Q:   out std_logic);
+end FFJK;
+
+architecture arquitectura of FFJK is
+
+	signal est: std_logic := '0';
+	
+begin
+	process(clk)
+    begin
+        if rising_edge(clk) then --Cambia en flanco ascendente
+            case (J & K) is
+                when "00" => 
+                    est <= est;
+                when "01" => 
+                    est <= '0';
+                when "10" => 
+                    est <= '1';
+                when "11" =>
+                    est <= not est;
+                when others =>
+                    null;
+            end case;
+        end if;
+    end process;
+
+    Q <= est;
+	 
+end arquitectura;
+		

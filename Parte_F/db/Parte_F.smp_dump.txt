@@ -1,0 +1,8 @@
+
+State Machine - |Diagrama_de_bloques|Parte_F:inst|fstate
+Name fstate.Guardar_dir fstate.Guardar_dato fstate.ACK1 fstate.R_W fstate.Oscioso 
+fstate.Oscioso 0 0 0 0 0 
+fstate.R_W 0 0 0 1 1 
+fstate.ACK1 0 0 1 0 1 
+fstate.Guardar_dato 0 1 0 0 1 
+fstate.Guardar_dir 1 0 0 0 1 

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Nov  3 09:41:07 2025
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Parte_F
+Top-level Entity Name : Diagrama_de_bloques
+Family : Cyclone IV E
+Total logic elements : 25
+    Total combinational functions : 8
+    Dedicated logic registers : 20
+Total registers : 20
+Total pins : 11
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,43 @@
+|Parte_B
+A0 => S0.IN0
+A0 => SYNTHESIZED_WIRE_0.IN0
+B0 => S0.IN1
+B0 => SYNTHESIZED_WIRE_1.IN0
+A1 => SYNTHESIZED_WIRE_1.IN1
+A1 => SYNTHESIZED_WIRE_3.IN0
+B1 => SYNTHESIZED_WIRE_3.IN1
+B1 => SYNTHESIZED_WIRE_0.IN1
+S0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= full_adder:b2v_inst2.S
+S2 <= full_adder:b2v_inst5.S
+C1 <= full_adder:b2v_inst5.C_out
+
+
+|Parte_B|Full_Adder:b2v_inst2
+A => x.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => x.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Parte_B|Full_Adder:b2v_inst5
+A => x.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => x.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

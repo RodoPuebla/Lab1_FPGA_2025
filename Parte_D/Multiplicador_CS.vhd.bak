@@ -1,0 +1,225 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+
+-- PROGRAM		"Quartus Prime"
+-- VERSION		"Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
+-- CREATED		"Mon Oct 27 07:41:06 2025"
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all; 
+
+LIBRARY work;
+
+ENTITY Parte_C IS 
+	PORT
+	(
+		A0 :  IN  STD_LOGIC;
+		A1 :  IN  STD_LOGIC;
+		B0 :  IN  STD_LOGIC;
+		B1 :  IN  STD_LOGIC;
+		CLK :  IN  STD_LOGIC;
+		S0 :  OUT  STD_LOGIC;
+		S1 :  OUT  STD_LOGIC;
+		S2 :  OUT  STD_LOGIC;
+		C1 :  OUT  STD_LOGIC
+	);
+END Parte_C;
+
+ARCHITECTURE bdf_type OF Parte_C IS 
+
+COMPONENT multiplicador_ss
+	PORT(A0 : IN STD_LOGIC;
+		 B0 : IN STD_LOGIC;
+		 A1 : IN STD_LOGIC;
+		 B1 : IN STD_LOGIC;
+		 S0 : OUT STD_LOGIC;
+		 S1 : OUT STD_LOGIC;
+		 S2 : OUT STD_LOGIC;
+		 C1 : OUT STD_LOGIC
+	);
+END COMPONENT;
+
+COMPONENT full_adder
+	PORT(A : IN STD_LOGIC;
+		 B : IN STD_LOGIC;
+		 C_in : IN STD_LOGIC;
+		 S : OUT STD_LOGIC;
+		 C_out : OUT STD_LOGIC
+	);
+END COMPONENT;
+
+SIGNAL	DFF_inst6 :  STD_LOGIC;
+SIGNAL	DFF_inst14 :  STD_LOGIC;
+SIGNAL	DFF_inst12 :  STD_LOGIC;
+SIGNAL	DFF_inst15 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_2 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_3 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_4 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_5 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_6 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_7 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_8 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_9 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_10 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_11 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_12 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_13 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_14 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_15 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_16 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_17 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_18 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_19 :  STD_LOGIC;
+
+
+BEGIN 
+SYNTHESIZED_WIRE_1 <= '0';
+SYNTHESIZED_WIRE_8 <= '1';
+SYNTHESIZED_WIRE_9 <= '0';
+SYNTHESIZED_WIRE_14 <= '0';
+SYNTHESIZED_WIRE_18 <= '1';
+SYNTHESIZED_WIRE_19 <= '0';
+
+
+
+b2v_inst : multiplicador_ss
+PORT MAP(A0 => DFF_inst6,
+		 B0 => DFF_inst14,
+		 A1 => DFF_inst12,
+		 B1 => DFF_inst15,
+		 S0 => SYNTHESIZED_WIRE_6,
+		 S1 => SYNTHESIZED_WIRE_10,
+		 S2 => SYNTHESIZED_WIRE_11,
+		 C1 => SYNTHESIZED_WIRE_12);
+
+
+SYNTHESIZED_WIRE_7 <= NOT(A0);
+
+
+
+
+b2v_inst11 : full_adder
+PORT MAP(A => SYNTHESIZED_WIRE_0,
+		 B => SYNTHESIZED_WIRE_1,
+		 C_in => SYNTHESIZED_WIRE_2,
+		 S => SYNTHESIZED_WIRE_5);
+
+
+PROCESS(CLK)
+BEGIN
+IF (RISING_EDGE(CLK)) THEN
+	DFF_inst12 <= SYNTHESIZED_WIRE_3;
+END IF;
+END PROCESS;
+
+
+
+PROCESS(CLK)
+BEGIN
+IF (RISING_EDGE(CLK)) THEN
+	DFF_inst14 <= SYNTHESIZED_WIRE_4;
+END IF;
+END PROCESS;
+
+
+PROCESS(CLK)
+BEGIN
+IF (RISING_EDGE(CLK)) THEN
+	DFF_inst15 <= SYNTHESIZED_WIRE_5;
+END IF;
+END PROCESS;
+
+
+SYNTHESIZED_WIRE_13 <= NOT(A1);
+
+
+
+SYNTHESIZED_WIRE_17 <= NOT(B0);
+
+
+
+SYNTHESIZED_WIRE_0 <= NOT(B1);
+
+
+
+PROCESS(CLK)
+BEGIN
+IF (RISING_EDGE(CLK)) THEN
+	S0 <= SYNTHESIZED_WIRE_6;
+END IF;
+END PROCESS;
+
+
+b2v_inst2 : full_adder
+PORT MAP(A => SYNTHESIZED_WIRE_7,
+		 B => SYNTHESIZED_WIRE_8,
+		 C_in => SYNTHESIZED_WIRE_9,
+		 S => SYNTHESIZED_WIRE_16,
+		 C_out => SYNTHESIZED_WIRE_15);
+
+
+PROCESS(CLK)
+BEGIN
+IF (RISING_EDGE(CLK)) THEN
+	S1 <= SYNTHESIZED_WIRE_10;
+END IF;
+END PROCESS;
+
+
+PROCESS(CLK)
+BEGIN
+IF (RISING_EDGE(CLK)) THEN
+	S2 <= SYNTHESIZED_WIRE_11;
+END IF;
+END PROCESS;
+
+
+PROCESS(CLK)
+BEGIN
+IF (RISING_EDGE(CLK)) THEN
+	C1 <= SYNTHESIZED_WIRE_12;
+END IF;
+END PROCESS;
+
+
+
+
+b2v_inst5 : full_adder
+PORT MAP(A => SYNTHESIZED_WIRE_13,
+		 B => SYNTHESIZED_WIRE_14,
+		 C_in => SYNTHESIZED_WIRE_15,
+		 S => SYNTHESIZED_WIRE_3);
+
+
+PROCESS(CLK)
+BEGIN
+IF (RISING_EDGE(CLK)) THEN
+	DFF_inst6 <= SYNTHESIZED_WIRE_16;
+END IF;
+END PROCESS;
+
+
+
+b2v_inst8 : full_adder
+PORT MAP(A => SYNTHESIZED_WIRE_17,
+		 B => SYNTHESIZED_WIRE_18,
+		 C_in => SYNTHESIZED_WIRE_19,
+		 S => SYNTHESIZED_WIRE_4,
+		 C_out => SYNTHESIZED_WIRE_2);
+
+
+
+END bdf_type;

@@ -1,0 +1,8 @@
+
+State Machine - |Maquina_De_Estados|fstate
+Name fstate.state_bit_2 fstate.state_bit_1 fstate.state_bit_0 
+fstate.A1 0 0 0 
+fstate.A2 0 0 1 
+fstate.A3 0 1 0 
+fstate.A4 0 1 1 
+fstate.A5 1 1 0 

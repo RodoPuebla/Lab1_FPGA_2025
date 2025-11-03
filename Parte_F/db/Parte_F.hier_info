@@ -1,0 +1,133 @@
+|Diagrama_de_bloques
+Salida_ACK <= Parte_F:inst.ack
+SCL => Parte_F:inst.clock
+SCL => inst5.IN1
+SCL => inst7.IN0
+SDA <> inst12
+Datos[0] <= shift_register8:inst13.Q[0]
+Datos[1] <= shift_register8:inst13.Q[1]
+Datos[2] <= shift_register8:inst13.Q[2]
+Datos[3] <= shift_register8:inst13.Q[3]
+Datos[4] <= shift_register8:inst13.Q[4]
+Datos[5] <= shift_register8:inst13.Q[5]
+Datos[6] <= shift_register8:inst13.Q[6]
+Datos[7] <= shift_register8:inst13.Q[7]
+
+
+|Diagrama_de_bloques|Parte_F:inst
+clock => fstate~1.DATAIN
+reset => reg_fstate.Guardar_dir.OUTPUTSELECT
+reset => reg_fstate.R_W.OUTPUTSELECT
+reset => reg_fstate.ACK1.OUTPUTSELECT
+reset => reg_fstate.Guardar_dato.OUTPUTSELECT
+reset => reg_fstate.Oscioso.OUTPUTSELECT
+reset => ack.OUTPUTSELECT
+reset => hab_dir.OUTPUTSELECT
+reset => hab_dato.OUTPUTSELECT
+fin_dir => process_1.IN0
+fin_dir => process_1.IN0
+soy => process_1.IN1
+soy => process_1.IN1
+fin_dato => Selector1.IN2
+fin_dato => Selector2.IN2
+sda => Selector0.IN2
+sda => Selector2.IN3
+ack <= ack.DB_MAX_OUTPUT_PORT_TYPE
+hab_dir <= hab_dir.DB_MAX_OUTPUT_PORT_TYPE
+hab_dato <= hab_dato.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_de_bloques|contador_mod7:inst8
+clk => Cout~reg0.CLK
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+reset => contador[0].ACLR
+reset => contador[1].ACLR
+reset => contador[2].ACLR
+reset => Cout~reg0.ENA
+cuenta[0] <= contador[0].DB_MAX_OUTPUT_PORT_TYPE
+cuenta[1] <= contador[1].DB_MAX_OUTPUT_PORT_TYPE
+cuenta[2] <= contador[2].DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_de_bloques|comparador_7bits:inst16
+data_in[0] => Equal0.IN6
+data_in[1] => Equal0.IN2
+data_in[2] => Equal0.IN5
+data_in[3] => Equal0.IN1
+data_in[4] => Equal0.IN4
+data_in[5] => Equal0.IN0
+data_in[6] => Equal0.IN3
+salida <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_de_bloques|shift_register7:inst10
+clk => reg[0].CLK
+clk => reg[1].CLK
+clk => reg[2].CLK
+clk => reg[3].CLK
+clk => reg[4].CLK
+clk => reg[5].CLK
+clk => reg[6].CLK
+reset => reg[0].ACLR
+reset => reg[1].ACLR
+reset => reg[2].ACLR
+reset => reg[3].ACLR
+reset => reg[4].ACLR
+reset => reg[5].ACLR
+reset => reg[6].ACLR
+serial_in => reg[6].DATAIN
+Q[0] <= reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= reg[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= reg[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= reg[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= reg[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_de_bloques|contador_mod8:inst9
+clk => Cout~reg0.CLK
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+reset => contador[0].ACLR
+reset => contador[1].ACLR
+reset => contador[2].ACLR
+reset => Cout~reg0.ENA
+cuenta[0] <= contador[0].DB_MAX_OUTPUT_PORT_TYPE
+cuenta[1] <= contador[1].DB_MAX_OUTPUT_PORT_TYPE
+cuenta[2] <= contador[2].DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_de_bloques|shift_register8:inst13
+clk => reg[0].CLK
+clk => reg[1].CLK
+clk => reg[2].CLK
+clk => reg[3].CLK
+clk => reg[4].CLK
+clk => reg[5].CLK
+clk => reg[6].CLK
+clk => reg[7].CLK
+reset => reg[0].ACLR
+reset => reg[1].ACLR
+reset => reg[2].ACLR
+reset => reg[3].ACLR
+reset => reg[4].ACLR
+reset => reg[5].ACLR
+reset => reg[6].ACLR
+reset => reg[7].ACLR
+serial_in => reg[7].DATAIN
+Q[0] <= reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= reg[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= reg[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= reg[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= reg[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= reg[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
